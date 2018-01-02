@@ -11,37 +11,30 @@ import android.widget.ListView;
 
 public class CityActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    private String[] cities;
-    private String TAG = CityActivity.class.getSimpleName();
+    private final static int REQUEST_LOGIN = 102;
+    private static final String TAG = CityActivity.class.getSimpleName();
+    private String[] city2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_city);
-        ListView city = (ListView) findViewById(R.id.city);
-        cities = new String[]{"新北市", "基隆市", "台北市"};
-        ArrayAdapter adapter = new ArrayAdapter(this,
-                android.R.layout.simple_list_item_1, cities);
+        ListView city = (ListView) findViewById(R.id.city2);
+        city2 = new String[]{"基隆市", "台北市", "新北市"};
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, city2);
         city.setAdapter(adapter);
         city.setOnItemClickListener(this);
+
     }
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-        Log.d(TAG, "onItemClick: " + position + "/" + cities[position]);
-        String[] data = null;
-        if(position == 0){
-            startActivity(new Intent(this, AreaActivity.class));
-            data = new String[]{"中正區", "暖暖區", "八堵區"};
-        }
-        if(position == 1){
-            startActivity(new Intent(this, AreaActivity.class));
-            data = new String[]{"永和區", "板橋區", "新莊區"};
-        }
-        if(position == 2){
-            startActivity(new Intent(this, AreaActivity.class));
-            data = new String[]{"信義區", "大安區", "士林區"};
-        }
+        Log.d(TAG, "onItemClick : " + position + "/" + city2[position]);
+        Intent a = new Intent(this, AreaActivity.class);
+        a.putExtra("area", city2[position]);
+        // setResult(RESULT_OK, getIntent());
+        startActivityForResult(a, REQUEST_LOGIN);
 
     }
 }

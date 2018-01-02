@@ -7,7 +7,7 @@
     tools:context="com.example.user.atmpractice.CityActivity">
 
     <ListView
-        android:id="@+id/city"
+        android:id="@+id/city2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="8dp"
