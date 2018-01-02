@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.user.atmpractice.CityActivity">
 
+    <ListView
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
 </android.support.constraint.ConstraintLayout>

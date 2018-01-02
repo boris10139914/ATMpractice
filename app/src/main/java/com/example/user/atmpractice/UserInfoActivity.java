@@ -89,7 +89,7 @@ public class UserInfoActivity extends AppCompatActivity {
 
     }
 
-    public void adress(View view) {
+    public void address(View view) {
         Intent cityintent = new Intent(this, CityActivity.class);
         startActivity(cityintent);
     }
