@@ -17,8 +17,8 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         String userid = getSharedPreferences("ATM", MODE_PRIVATE)
                 .getString("USERID", "");
-        eduserid = findViewById(R.id.ed_userid);
-        edpassword = findViewById(R.id.ed_password);
+        eduserid = (EditText)findViewById(R.id.ed_userid);
+        edpassword = (EditText)findViewById(R.id.ed_password);
         eduserid.setText(userid);
     }
 

@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">ATMpractice</string>
     <string name="action_settings">Settings</string>
+    <string-array name="ages">
+        <item>16-25</item>
+        <item>26-35</item>
+        <item>36-45</item>
+        <item>46-55</item>
+    </string-array>
 </resources>

@@ -20,16 +20,16 @@ public class UserInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_info);
-        ednickname = findViewById(R.id.ed_nickname);
-        edphone = findViewById(R.id.ed_phone);
-        spages = findViewById(R.id.sp_ages);
+        ednickname = (EditText)findViewById(R.id.ed_nickname);
+        edphone = (EditText)findViewById(R.id.ed_phone);
+        spages = (Spinner)findViewById(R.id.sp_ages);
         ArrayAdapter spagesAdapter = ArrayAdapter.createFromResource(this, R.array.ages, android.R.layout.simple_list_item_1);
         spages.setAdapter(spagesAdapter);
         spages.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String text = spages.getSelectedItem().toString();
-                if ("16-25".equals(text)) {
+                /*if ("16-25".equals(text)) {
                     String a1 = getSharedPreferences("ATM", MODE_PRIVATE)
                             .getString("AGES", "");
                     ages = text;
@@ -61,7 +61,7 @@ public class UserInfoActivity extends AppCompatActivity {
                     ArrayAdapter a2adapter = new ArrayAdapter(UserInfoActivity.this, android.R.layout.simple_list_item_1, a2);
                     spages.setAdapter(a2adapter);
 
-                }
+                }*/
             }
 
             @Override
