@@ -26,14 +26,14 @@ public class LoginActivity extends AppCompatActivity {
         String usid = eduserid.getText().toString();
         String passwd = edpassword.getText().toString();
         if ("boris10139914".equals(usid) && "boris5566".equals(passwd)) {
-            Toast.makeText(this, "登入成功", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "登入成功~", Toast.LENGTH_SHORT).show();
             getIntent().putExtra("LOGIN_USERID", usid);
             getIntent().putExtra("LOGIN_PASSWORD", passwd);
             setResult(RESULT_OK, getIntent());
             finish();
         } else {
             new AlertDialog.Builder(this)
-                    .setMessage("登入失敗" + "")//要加空白字串 不然會執行崩潰
+                    .setMessage("登入失敗~" + "")//要加空白字串 不然會執行崩潰
                     .show();
         }
 
