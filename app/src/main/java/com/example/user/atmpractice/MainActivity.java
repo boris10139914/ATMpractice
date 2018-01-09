@@ -10,6 +10,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        ListView abc =(ListView)findViewById(R.id.aabbcc);
+        String[] ABC ={"AA","BB","CC"};
+        ArrayAdapter abcarrayAdapter = new ArrayAdapter(this,android.R.layout.simple_expandable_list_item_1,ABC);
+        abc.setAdapter(abcarrayAdapter);
         if (!logan) {
             Intent intentlogin = new Intent(this, LoginActivity.class);//括號記得要去哪，oncreat的this前面不用點東西
             startActivityForResult(intentlogin, REQUEST_LOGIN);

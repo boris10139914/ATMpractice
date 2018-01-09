@@ -8,4 +8,12 @@
     tools:context="com.example.user.atmpractice.MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <ListView
+        android:id="@+id/abc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

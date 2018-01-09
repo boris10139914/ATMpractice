@@ -30,8 +30,8 @@ public class CityActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-        Log.d(TAG, "onItemClick : " + position + "/" + city2[position]);
-        Intent a = new Intent(this, AreaActivity.class);
+        //Log.d(TAG, "onItemClick : " + position + "/" + city2[position]);
+        Intent a = new Intent(this, AreaActivity.class);//
         a.putExtra("area", city2[position]);
         // setResult(RESULT_OK, getIntent());
         startActivityForResult(a, REQUEST_LOGIN);
